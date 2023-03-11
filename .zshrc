@@ -107,8 +107,8 @@ source $ZSH/oh-my-zsh.sh
 alias scim="sc-im"
 alias yay="paru"
 alias syu="paru -Syu"
-alias vpn="wg-quick up /home/marenleka/.wireguard/ultra-ams.conf"
-alias vpndown="wg-quick down /home/marenleka/.wireguard/ultra-ams.conf"
+alias vpn="wg-quick up ~/.wireguard/*-ams.conf"
+alias vpndown="wg-quick down ~/.wireguard/*-ams.conf"
 
 # Syntax highlighting color change
 ZSH_HIGHLIGHT_STYLES[suffix-alias]=fg=blue,underline
