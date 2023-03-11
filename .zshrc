@@ -125,8 +125,8 @@ alias crontab="export VISUAL=nvim; crontab"
 alias vimdiff="nvim -d"
 export EDITOR=nvim
 
-export PATH=$PATH:/home/marenleka/.cargo/bin/
-export PATH=$PATH:/home/marenleka/.local/bin/
+export PATH=$PATH:~/.cargo/bin/
+export PATH=$PATH:~/.local/bin/
 
 # Prompt using starship
 eval "$(starship init zsh)"
