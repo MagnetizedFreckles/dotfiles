@@ -1,0 +1,10 @@
+ls
+help
+ver
+version 
+paru -Syu
+version 
+$nu.env-path
+$nu.config-path
+zsh
+zsh
