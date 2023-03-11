@@ -130,7 +130,8 @@ export PATH=$PATH:$HOME/.local/bin/
 
 # Alias for managing dotfiles using bare gitrepo
 alias dfgit='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
-GLOBALIAS_FILTER_VALUES=(dfgit)
+alias dflg='lazygit --git-dir=$HOME/.dotfiles/ --work-tree=$HOME' # Lazygit alias for dotfile bare repo
+GLOBALIAS_FILTER_VALUES=(dfgit, dflg) # So this long commands don't unwrap when I type
 
 # Prompt using starship (should be at the end)
 eval "$(starship init zsh)"
