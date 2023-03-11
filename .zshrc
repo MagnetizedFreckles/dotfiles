@@ -107,8 +107,8 @@ source $ZSH/oh-my-zsh.sh
 alias scim="sc-im"
 alias yay="paru"
 alias syu="paru -Syu"
-alias vpn="wg-quick up ~/.wireguard/*-ams.conf"
-alias vpndown="wg-quick down ~/.wireguard/*-ams.conf"
+alias vpn="wg-quick up $HOME/.wireguard/*-ams.conf"
+alias vpndown="wg-quick down $HOME/.wireguard/*-ams.conf"
 
 # Syntax highlighting color change
 ZSH_HIGHLIGHT_STYLES[suffix-alias]=fg=blue,underline
@@ -125,8 +125,8 @@ alias crontab="export VISUAL=nvim; crontab"
 alias vimdiff="nvim -d"
 export EDITOR=nvim
 
-export PATH=$PATH:~/.cargo/bin/
-export PATH=$PATH:~/.local/bin/
+export PATH=$PATH:$HOME/.cargo/bin/
+export PATH=$PATH:$HOME/.local/bin/
 
 # Prompt using starship
 eval "$(starship init zsh)"
