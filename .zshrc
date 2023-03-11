@@ -128,9 +128,9 @@ export EDITOR=nvim
 export PATH=$PATH:$HOME/.cargo/bin/
 export PATH=$PATH:$HOME/.local/bin/
 
-# Prompt using starship
-eval "$(starship init zsh)"
-
 # Alias for managing dotfiles using bare gitrepo
 alias dfgit='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 GLOBALIAS_FILTER_VALUES=(dfgit)
+
+# Prompt using starship (should be at the end)
+eval "$(starship init zsh)"
