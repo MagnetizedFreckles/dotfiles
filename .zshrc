@@ -71,9 +71,7 @@ export ZSH="$HOME/.oh-my-zsh"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
-    # git
     vi-mode
-    globalias
     zsh-autosuggestions
     history-substring-search
     zsh-syntax-highlighting
@@ -130,8 +128,9 @@ export PATH=$PATH:$HOME/.local/bin/
 
 # Alias for managing dotfiles using bare gitrepo
 alias dfgit='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+GLOBALIAS_FILTER_VALUES=(dfgit) # So this long commands don't unwrap when I type
 alias dflg='lazygit --git-dir=$HOME/.dotfiles/ --work-tree=$HOME' # Lazygit alias for dotfile bare repo
-GLOBALIAS_FILTER_VALUES=(dfgit, dflg) # So this long commands don't unwrap when I type
+GLOBALIAS_FILTER_VALUES=(dflg) # This also shouldn't unwrap
 
-# Prompt using starship (should be at the end)
+# Prompt using starship (should be after exporting PATH to avoid issues)
 eval "$(starship init zsh)"
