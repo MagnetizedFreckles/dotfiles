@@ -22,6 +22,7 @@ return {
                 "help",
                 "html",
                 "json",
+                "kdl",
                 "lua",
                 "markdown",
                 "markdown_inline",
