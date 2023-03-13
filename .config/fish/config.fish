@@ -10,6 +10,9 @@ if status is-interactive
     fish_vi_cursor
 end
 
+# In case cursors don't work in terminal
+set fish_vi_force_cursor
+
 # Emulates vim's cursor shape behavior
 # Set the normal and visual mode cursors to a block
 set fish_cursor_default block
