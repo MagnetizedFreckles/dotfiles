@@ -11,6 +11,7 @@ return {
                 "markdownlint",
                 "marksman",
                 "ruff",
+                "ruff-lsp",
                 "stylua",
                 "shfmt",
                 "yaml-language-server",
