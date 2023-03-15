@@ -37,6 +37,7 @@ return {
             servers = {
                 bashls = {},
                 marksman = {},
+                ruff_lsp = {},
                 yamlls = {},
                 jsonls = {},
                 lua_ls = {
