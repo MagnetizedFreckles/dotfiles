@@ -1,1 +1,10 @@
-.dotfiles
+# Ignore everything
+*
+
+# Except files beginning with dot, LICENSE and README in home folder
+!/.*
+!/LICENSE
+!/README
+
+# And config folder
+!.config/*
