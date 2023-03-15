@@ -10,7 +10,7 @@ return {
                     -- nls.builtins.formatting.prettierd,
                     nls.builtins.formatting.stylua, -- Lua formatting
                     nls.builtins.diagnostics.ruff, -- Python diagnostics
-                    -- nls.builtins.diagnostics.markdownlint, -- Markdown diagnostics
+                    nls.builtins.diagnostics.markdownlint, -- Markdown diagnostics
                     nls.builtins.formatting.rustfmt, -- Rust formatting
                 },
             }
