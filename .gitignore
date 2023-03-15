@@ -7,4 +7,4 @@
 !/README
 
 # And config folder
-!.config/*
+!.config/**/*
