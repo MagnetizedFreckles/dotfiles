@@ -1,6 +1,12 @@
 # Sourcing other config files
 source ~/.config/fish/aliases.fish
 
+# Adding rust-related stuff to PATH
+set PATH $HOME/.cargo/bin $PATH
+
+# And also python's files
+set PATH $HOME/.local/bin $PATH
+
 # Disabling welcome message in fish
 set -U fish_greeting
 
@@ -8,6 +14,10 @@ if status is-interactive
     # Commands to run in interactive sessions can go here
     fish_vi_key_bindings
     fish_vi_cursor
+end
+
+function fish_add_path
+
 end
 
 # In case cursors don't work in terminal
