@@ -23,6 +23,7 @@ return {
                 "html",
                 "json",
                 "kdl",
+                "latex",
                 "lua",
                 "markdown",
                 "markdown_inline",
