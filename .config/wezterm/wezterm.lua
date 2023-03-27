@@ -1,5 +1,4 @@
 local wezterm = require("wezterm")
-local config = {}
 
 return {
     -- Smart tab bar [distraction-free mode]
@@ -17,6 +16,10 @@ return {
         -- Bar or Underline.
         cursor_border = "#9399b2",
     },
+
+    -- Windowing stuff
+    initial_cols = 114,
+    initial_rows = 32,
 
     window_padding = {
         left = 0,
@@ -36,7 +39,6 @@ return {
 
     -- Font configuration
     -- https://wezfurlong.org/wezterm/config/fonts.html
-    -- font = wezterm.font("Iosevka Nerd Font"),
     font_size = 15,
 
     font = wezterm.font({ family = "FiraCode Nerd Font" }),
@@ -70,6 +72,8 @@ return {
         },
     },
 
+    -- Keymaps
+    --[[
     leader = { key = "a", mods = "CMD", timeout_milliseconds = 1000 },
     keys = {
         {
@@ -82,5 +86,5 @@ return {
             mods = "LEADER",
             action = wezterm.action.SplitVertical({ domain = "CurrentPaneDomain" }),
         },
-    },
+    },]]
 }
