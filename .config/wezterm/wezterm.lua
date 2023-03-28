@@ -1,6 +1,10 @@
 local wezterm = require("wezterm")
 
 return {
+
+    -- Spawn a fish shell in login mode
+    default_prog = { "/usr/bin/fish", "-l" },
+
     -- Smart tab bar [distraction-free mode]
     hide_tab_bar_if_only_one_tab = true,
 
