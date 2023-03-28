@@ -3,8 +3,8 @@
 
 # Except files beginning with dot, LICENSE and README in home folder
 !/.*
-!/LICENSE
-!/README
+!/LICENSE*
+!/README*
 
 # And config folder
 !.config/**/*
