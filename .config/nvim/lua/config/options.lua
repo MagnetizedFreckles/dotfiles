@@ -24,7 +24,8 @@ opt.listchars = { tab = "▸ ", trail = "·" } -- Middle dot for trailing spaces
 opt.wrap = true -- Line wrapping
 opt.linebreak = true -- Word wrapping (so words won't divide in half when line wraps)
 opt.breakindent = true -- Indent wrapped lines
-opt.spelllang = {} -- Disabling spellcheck, because it sucks
+opt.spell = true
+opt.spelllang = { "en", "ru" } -- English/Russian as default spellchecked languages
 
 -----------------------------------------------------------
 -- Editing comfort
