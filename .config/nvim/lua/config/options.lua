@@ -48,5 +48,7 @@ opt.iskeyword:append("-") -- Dash as part of the word
 -----------------------------------------------------------
 -- Adding cyrillic mappings for normal and visual mode
 -----------------------------------------------------------
-opt.langmap = "ФИСВУАПРШОЛДЬТЩЗЙКЫЕГМЦЧНЯ;ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-opt.langmap = "фисвуапршолдьтщзйкыегмцчня;abcdefghijklmnopqrstuvwxyz"
+opt.langmap = {
+    "ФИСВУАПРШОЛДЬТЩЗЙКЫЕГМЦЧНЯ;ABCDEFGHIJKLMNOPQRSTUVWXYZ",
+    "фисвуапршолдьтщзйкыегмцчня;abcdefghijklmnopqrstuvwxyz",
+}
