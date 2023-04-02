@@ -1,4 +1,4 @@
-return {
+local M = {
     {
         "neovim/nvim-lspconfig",
         event = "BufReadPre",
@@ -132,3 +132,5 @@ return {
         config = true,
     },
 }
+
+return M
