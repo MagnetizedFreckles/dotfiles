@@ -1,4 +1,4 @@
-return {
+local M = {
     {
 
         "williamboman/mason.nvim",
@@ -7,6 +7,7 @@ return {
         opts = {
             ensure_installed = {
                 "bash-language-server",
+                "codelldb",
                 "json-lsp",
                 "markdownlint",
                 "marksman",
@@ -30,3 +31,5 @@ return {
         end,
     },
 }
+
+return M
