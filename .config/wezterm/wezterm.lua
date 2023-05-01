@@ -77,18 +77,5 @@ return {
     },
 
     -- Keymaps
-    --[[
-    leader = { key = "a", mods = "CMD", timeout_milliseconds = 1000 },
-    keys = {
-        {
-            key = "|",
-            mods = "LEADER|SHIFT",
-            action = wezterm.action.SplitHorizontal({ domain = "CurrentPaneDomain" }),
-        },
-        {
-            key = "-",
-            mods = "LEADER",
-            action = wezterm.action.SplitVertical({ domain = "CurrentPaneDomain" }),
-        },
-    },]]
+    -- Nothing here
 }
