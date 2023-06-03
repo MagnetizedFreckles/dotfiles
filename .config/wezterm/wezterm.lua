@@ -1,9 +1,16 @@
 local wezterm = require("wezterm")
 
-return {
+local default_prog
 
-    -- Spawn a fish shell in login mode
-    default_prog = { "/usr/bin/fish", "-l" } or { "/usr/local/bin/fish", "-l" },
+if wezterm.target_triple == "x86_64-apple-darwin" or wezterm.target_triple == "aarch64-apple-darwin" then
+    default_prog = { "/usr/local/bin/fish", "-l" }
+else
+    default_prog = { "/usr/bin/fish", "-l" }
+end
+
+local M = {
+
+    default_prog = default_prog,
 
     -- Smart tab bar [distraction-free mode]
     hide_tab_bar_if_only_one_tab = true,
@@ -81,3 +88,5 @@ return {
 
     -- Keymaps
 }
+
+return M
