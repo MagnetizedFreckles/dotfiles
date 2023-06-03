@@ -74,7 +74,7 @@ plugins=(
     vi-mode
     # zsh-autosuggestions
     history-substring-search
-    zsh-syntax-highlighting
+    # zsh-syntax-highlighting
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -109,9 +109,9 @@ alias vpn="wg-quick up $HOME/.wireguard/*-ams.conf"
 alias vpndown="wg-quick down $HOME/.wireguard/*-ams.conf"
 
 # Syntax highlighting color change
-ZSH_HIGHLIGHT_STYLES[suffix-alias]=fg=blue,underline
-ZSH_HIGHLIGHT_STYLES[precommand]=fg=blue,underline
-ZSH_HIGHLIGHT_STYLES[arg0]=fg=blue
+# ZSH_HIGHLIGHT_STYLES[suffix-alias]=fg=blue,underline
+# ZSH_HIGHLIGHT_STYLES[precommand]=fg=blue,underline
+# ZSH_HIGHLIGHT_STYLES[arg0]=fg=blue
 
 # Vi-mode related settings
 VI_MODE_RESET_PROMPT_ON_MODE_CHANGE=true
