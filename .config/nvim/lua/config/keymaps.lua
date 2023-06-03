@@ -4,7 +4,7 @@
 
 local Util = require("lazy.core.util")
 local spellswitch = require("config.spellswitch")
-local dumbpunto = require("config.dumbpunto")
+-- local dumbpunto = require("config.dumbpunto")
 
 local map = vim.api.nvim_set_keymap
 -- local opt = vim.opt
