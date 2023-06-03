@@ -73,7 +73,7 @@ export ZSH="$HOME/.oh-my-zsh"
 plugins=(
     vi-mode
     # zsh-autosuggestions
-    history-substring-search
+    # history-substring-search
     # zsh-syntax-highlighting
 )
 
