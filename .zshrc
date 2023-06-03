@@ -72,7 +72,7 @@ export ZSH="$HOME/.oh-my-zsh"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
     vi-mode
-    zsh-autosuggestions
+    # zsh-autosuggestions
     history-substring-search
     zsh-syntax-highlighting
 )
