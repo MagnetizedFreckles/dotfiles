@@ -41,8 +41,9 @@ map("n", "<leader>uk", ":lua ToggleUk()<CR>", { noremap = true, silent = true, d
 -- F7 to disable spellcheck completely
 map("n", "<F7>", ":lua DisableSpell()<CR>", { noremap = true, silent = true })
 
--- F6 to switch layout of selected text
+--[[ F6 to switch layout of selected text
 function DumbPunto()
     dumbpunto.ChangeLayout()
 end
 map("v", "<F6>", ":lua DumbPunto()<CR>", { noremap = true, silent = true })
+]]
