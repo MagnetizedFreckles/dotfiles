@@ -4,7 +4,7 @@
 
 local Util = require("lazy.core.util")
 local spellswitch = require("config.spellswitch")
--- local langswitch = require("config.langswitch")
+local dumbpunto = require("config.dumbpunto")
 
 local map = vim.api.nvim_set_keymap
 -- local opt = vim.opt
@@ -41,9 +41,8 @@ map("n", "<leader>uk", ":lua ToggleUk()<CR>", { noremap = true, silent = true, d
 -- F7 to disable spellcheck completely
 map("n", "<F7>", ":lua DisableSpell()<CR>", { noremap = true, silent = true })
 
---[[ F6 to switch layout of selected text
-function PuntoSwitcher()
-    langswitch.ChangeLayout()
+-- F6 to switch layout of selected text
+function DumbPunto()
+    dumbpunto.ChangeLayout()
 end
-map("n", "<F6>", ":lua PuntoSwitcher()<CR>", { noremap = true, silent = true })
-]]
+map("v", "<F6>", ":lua DumbPunto()<CR>", { noremap = true, silent = true })
