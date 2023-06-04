@@ -37,7 +37,21 @@ dfgit checkout
 dfgit config --local status.showUntrackedFiles no
 ```
 6. Optional. Download required nerd fonts.  
-Script for this will come later someday.
+Script for that is at `~/.scripts/nerdfont_download.sh`  
+Firstly, you will need to make this script executable:
+```bash
+chmod +x $HOME/.scripts/nerdfont_download.sh
+```
+After that, just run the script
+```bash
+$HOME/.scripts/nerdfont_download.sh
+```
+And, at last, you may want to remove the downloaded zips
+(I deliberately decided not to make this part of a script)
+```bash
+rm FiraCode.zip
+rm Iosevka.zip
+```
 
 ## Features
 
