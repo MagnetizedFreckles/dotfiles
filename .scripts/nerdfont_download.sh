@@ -31,7 +31,6 @@ echo "Downloading FiraCode version $FIRACODE_LATEST_VERSION"
 wget -P "$HOME/Downloads/" "$FIRACODE_DOWNLOAD_URL"
 echo "Unzipping FiraCode"
 unzip -q "$HOME/Downloads/FiraCode.zip" -d "$TARGET_DIR"
-fc-cache -fv
 echo "FiraCode installed!"
 
 # Get the latest version for Iosevka
@@ -42,7 +41,7 @@ echo "Downloading Iosevka version $IOSEVKA_LATEST_VERSION"
 wget -P "$HOME/Downloads/" "$IOSEVKA_DOWNLOAD_URL"
 echo "Unzipping Iosevka"
 unzip -q "$HOME/Downloads/Iosevka.zip" -d "$TARGET_DIR"
-fc-cache -fv
 echo "Iosevka installed!"
 
+fc-cache -fv
 echo "That's all! You may want to clear the Downloads now"
