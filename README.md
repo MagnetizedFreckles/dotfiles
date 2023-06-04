@@ -49,8 +49,8 @@ $HOME/.scripts/nerdfont_download.sh
 And, at last, you may want to remove the downloaded zips
 (I deliberately decided not to make this part of a script)
 ```bash
-rm FiraCode.zip
-rm Iosevka.zip
+rm $HOME/Downloads/FiraCode.zip
+rm $HOME/Downloads/Iosevka.zip
 ```
 
 ## Features
