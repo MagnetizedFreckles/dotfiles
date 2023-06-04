@@ -1,7 +1,15 @@
 local wezterm = require("wezterm")
 local shell = require("config.shell")
+Os_name = require("utils.os_name")
+Blur = require("utils.blur")
+Opacity = require("config.opacity")
 
-local M = {
+-- Enable blur on KDE
+if Os_name.os_name() == "linux" then
+    Blur.linux()
+end
+
+local config = {
 
     default_prog = shell,
 
@@ -32,14 +40,8 @@ local M = {
         bottom = 0,
     },
 
-    -- Enable blur on KDE
-    wezterm.on("window-focus-changed", function()
-        os.execute(
-            "xdotool search -classname org.wezfurlong.wezterm | xargs -I{} xprop -f _KDE_NET_WM_BLUR_BEHIND_REGION 32c -set _KDE_NET_WM_BLUR_BEHIND_REGION 0 -id {}"
-        )
-    end),
-
-    window_background_opacity = 0.85,
+    window_background_opacity = Opacity,
+    macos_window_background_blur = 20,
 
     -- Font configuration
     -- https://wezfurlong.org/wezterm/config/fonts.html
@@ -82,4 +84,4 @@ local M = {
     -- Keymaps
 }
 
-return M
+return config
