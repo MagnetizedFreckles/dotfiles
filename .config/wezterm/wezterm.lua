@@ -1,16 +1,9 @@
 local wezterm = require("wezterm")
-
-local default_prog
-
-if wezterm.target_triple == "x86_64-apple-darwin" or wezterm.target_triple == "aarch64-apple-darwin" then
-    default_prog = { "/usr/local/bin/fish", "-l" }
-else
-    default_prog = { "/usr/bin/fish", "-l" }
-end
+local shell = require("config.shell")
 
 local M = {
 
-    default_prog = default_prog,
+    default_prog = shell,
 
     -- Smart tab bar [distraction-free mode]
     hide_tab_bar_if_only_one_tab = true,
