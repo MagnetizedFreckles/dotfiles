@@ -1,5 +1,5 @@
 # Sourcing other config files
-source ~/.config/fish/aliases.fish
+source $HOME/.config/fish/aliases.fish
 
 # Adding rust-related stuff to PATH
 set PATH $HOME/.cargo/bin $PATH
