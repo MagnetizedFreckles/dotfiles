@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # Set the target location for unzipping based on the operating system
 OS=$(uname -s)
