@@ -68,7 +68,7 @@ export ZSH="$HOME/.oh-my-zsh"
 # Which plugins would you like to load?
 # Standard plugins can be found in $ZSH/plugins/
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
-# Example format: plugins=(rails git textmate ruby lighthouse)
+
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
     vi-mode
@@ -101,12 +101,8 @@ source $ZSH/oh-my-zsh.sh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
 #
-# Aliases
-alias scim="sc-im"
-alias yay="paru"
-alias syu="paru -Syu"
-alias vpn="wg-quick up $HOME/.wireguard/*-ams.conf"
-alias vpndown="wg-quick down $HOME/.wireguard/*-ams.conf"
+
+source "$HOME/.shells_common.sh"
 
 # Syntax highlighting color change
 # ZSH_HIGHLIGHT_STYLES[suffix-alias]=fg=blue,underline
@@ -117,19 +113,7 @@ alias vpndown="wg-quick down $HOME/.wireguard/*-ams.conf"
 VI_MODE_RESET_PROMPT_ON_MODE_CHANGE=true
 VI_MODE_SET_CURSOR=true
 
-# Editing crontab with neovim
-alias crontab="export VISUAL=nvim; crontab"
-
-alias vimdiff="nvim -d"
-export EDITOR=nvim
-
-export PATH=$PATH:$HOME/.cargo/bin/
-export PATH=$PATH:$HOME/.local/bin/
-
-# Alias for managing dotfiles using bare gitrepo
-alias dfgit='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 GLOBALIAS_FILTER_VALUES=(dfgit) # So this long commands don't unwrap when I type
-alias dflg='lazygit --git-dir=$HOME/.dotfiles/ --work-tree=$HOME' # Lazygit alias for dotfile bare repo
 GLOBALIAS_FILTER_VALUES=(dflg) # This also shouldn't unwrap
 
 # Prompt using starship (should be after exporting PATH to avoid issues)
