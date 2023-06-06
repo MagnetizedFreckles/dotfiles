@@ -62,11 +62,13 @@ All patched **Nerd Fonts**.
 
 ### Shell
 
-I mostly use **fish**, but still have an **oh-my-zsh** config and **bashrc** with basic aliases.  
-But want to migrate from **omz** to generic **zsh** someday.
-Because of compatibility issues.
+I mostly use **fish**, but still have a somewhat usable **zsh** config and very basic **bashrc**.  
 
-And yeah, **starship** as my prompt engine. Pretty comfy.
+`~/.shells_common.sh` contains aliases+PATH variables, and it is sourced by both bash and zsh.  
+Maybe, I will make it so fish could also source it.
+But now fish aliases are in `~/.config/fish/aliases.fish`
+
+And yeah, **starship** as my cross-shell prompt engine. Pretty comfy.
 
 ### Terminal
 
