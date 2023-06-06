@@ -1,3 +1,4 @@
+# Get all aliases and PATH variables
 source "$HOME/.shells_common.sh"
 
 # Vi-mode for bash
