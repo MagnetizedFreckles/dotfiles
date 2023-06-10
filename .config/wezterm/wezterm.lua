@@ -1,5 +1,6 @@
 local wezterm = require("wezterm")
 local shell = require("config.shell")
+local keybinds = require("config.keybinds")
 Os_name = require("utils.os_name")
 Blur = require("utils.blur")
 Opacity = require("config.opacity")
@@ -81,7 +82,8 @@ local config = {
         },
     },
 
-    -- Keymaps
+    -- Keybinds
+    mouse_bindings = keybinds.mouse_bindings,
 }
 
 return config
