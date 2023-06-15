@@ -77,7 +77,7 @@ disabled = false # If you are using only one shell, disable this
 
 [character]
 success_symbol = "[○](bold white)" # Usual symbol. In vim-like means "Insert"
-error_symbol = " [×](bold red)"
+error_symbol = "[×](bold red)"
 vimcmd_symbol = '[⡷](bold white)' # In vim-like means "Normal"
 vimcmd_replace_one_symbol = '[_](bold white)' # In vim-like meand "Replace" (fish only)
 vimcmd_replace_symbol = '[_](bold white)'
