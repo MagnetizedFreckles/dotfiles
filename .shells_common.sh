@@ -1,4 +1,5 @@
 # Aliases
+alias la="ls -lah"
 alias scim="sc-im"
 alias yay="paru"
 alias syu="paru -Syu"
