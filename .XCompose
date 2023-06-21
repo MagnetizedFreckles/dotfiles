@@ -1,7 +1,0 @@
-# ~/.XCompose
-# This file defines custom Compose sequence for Unicode characters 
-
-# Import default rules from the system Compose file:
-include "/usr/share/X11/locale/en_US.UTF-8/Compose"
-# Memes
-<Multi_key> <s> <u> <s>		: "ඞ" # AMOGUS
