@@ -17,7 +17,7 @@ Of course, you may change names of alias or directory, if you like.
 
 1. Add this line to `.bashrc` or `.zshrc`, or just run it in terminal.
 ```bash
-alias dfgit='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+alias dfgit='/usr/bin/env git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 ```
 2. Run this, so not to create any recursion problems when cloning.
 (I personally don't find it necessary, but the guide says so)
