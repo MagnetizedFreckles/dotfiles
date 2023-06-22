@@ -14,7 +14,7 @@ add_newline = false
 
 # Main prompt
 format = """
-[╭](bold white)$username$hostname$shell$directory$git_branch$git_status
+[╭](bold white)$username$hostname$os$shell$directory$nix_shell$git_branch$git_status
 [╰](bold white)$character
 """
 
@@ -28,7 +28,7 @@ style_root = "bold red"
 show_always = true # Username is shown always
 
 [hostname]
-format = "[$hostname]($style)[$ssh_symbol]($style) [in](fg:242) "
+format = "[$hostname]($style)[$ssh_symbol]($style)"
 style = "italic fg:33"
 trim_at = "-"
 ssh_only = false # Hostname is shown always, not only in ssh
@@ -69,7 +69,7 @@ disabled = false
 
 # Module for displaying currently used shell
 [shell]
-format = '[$indicator]($style) ' # In square brackets
+format = ' [in](fg:242) [$indicator]($style) ' # In square brackets
 style = 'bold italic fg:69'
 zsh_indicator = '[zsh](bold italic fg:56)'
 fish_indicator = '[fsh](bold italic fg:42)'
@@ -86,8 +86,13 @@ vimcmd_visual_symbol = '[>](bold white)' # In vim-like means "Visual" (fish only
 # Symbol depending on your OS. Disabled in my config
 [os]
 format = "[$symbol]($style)"
-style = "fg:33"
+style = "fg:39"
 disabled = true
+
+[nix_shell]
+format = 'via [$symbol$state]($style) [\($name\)](bold italic fg:39) '
+symbol = " "
+style = 'italic fg:51'
 
 # Below are just nerd-font icons for different things, copied from official docs
 # Some of them are used; most of them aren't
@@ -151,9 +156,6 @@ symbol = "喝 "
 
 [nim]
 symbol = " "
-
-[nix_shell]
-symbol = " "
 
 [nodejs]
 symbol = " "
