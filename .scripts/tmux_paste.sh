@@ -2,7 +2,8 @@
 
 OS=$(uname -s)
 if [ "$OS" = "Linux" ]; then
-    xclip -o | tmux load-buffer - ; tmux paste-buffer
+    # xclip -o | tmux load-buffer - ; tmux paste-buffer
+    cb paste | tmux load-buffer - ; tmux paste-buffer
     tmux display-message "Pasted!"
 elif [ "$OS" = "Darwin" ]; then
     reattach-to-user-namespace pbpaste | tmux load-buffer - ; tmux paste-buffer
