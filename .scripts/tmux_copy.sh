@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+# A script to copy from tmux buffer
+
 OS=$(uname -s)
 if [ "$OS" = "Linux" ]; then
     # xsel -ip && xsel -op | xsel -ib;

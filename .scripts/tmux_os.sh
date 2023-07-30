@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+# Tmux helper script to source OS-specific options
+
 OS=$(uname -s)
 
 if [ "$OS" = "Linux" ]; then

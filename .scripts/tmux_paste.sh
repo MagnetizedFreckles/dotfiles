@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+# A script to paste in tmux buffer
+
 OS=$(uname -s)
 if [ "$OS" = "Linux" ]; then
     # xclip -o | tmux load-buffer - ; tmux paste-buffer
