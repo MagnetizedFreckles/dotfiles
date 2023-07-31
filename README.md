@@ -86,8 +86,7 @@ Probably going to change my multiplexer to **zellij** after session saving featu
 
 ### Other stuff
 
-~~**XCompose** file with some additional symbols for Compose Key.~~
-*Removed temporarily because it breaks stuff on NixOS*
+**.XCompose** file with some additional symbols for Compose Key.
 
 **Markdownlint**, **prettier** and **stylua** config files.
 Not actively using the first two however.
