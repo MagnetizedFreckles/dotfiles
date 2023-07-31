@@ -1,16 +1,18 @@
-# Just my dotfiles
+# Just my dotfiles :3
 
-Made by a person with a serious skill issue.  
+Made by a person with a severe skill issue.^^  
 Lots of sample configs and other people's dotfiles were used.
 
 Feel free to borrow anything you need.
 But be careful.
 
+***This will work only only on Linux!!!***  
+***Lots of things won't work on macOS, and usually I don't know why.***  
+***And, of course, this isn't even intended to work on Windows***
+
 *Managed using [git bare repo](https://www.atlassian.com/git/tutorials/dotfiles)*
 
 ## Installation instructions
-
-***This will work only only on Linux and macOS!!!***
 
 This is the way I keep my manage my configs.
 Of course, you may change names of alias or directory, if you like.
@@ -74,8 +76,9 @@ And yeah, **starship** as my cross-shell prompt engine. Pretty comfy.
 
 Right now I use **WezTerm**, previously used **Alacritty**.
 
-However, instead of builtin tab functionality, I still use **tmux**.  
-Probably going to change my multiplexer to **zellij** when there will be session saving feature added.
+However, instead of builtin tab functionality, I still use **tmux**.
+Have some helper scripts for it in respective directory.  
+Probably going to change my multiplexer to **zellij** after session saving feature is added.
 
 ### Editor
 
@@ -83,7 +86,8 @@ Probably going to change my multiplexer to **zellij** when there will be session
 
 ### Other stuff
 
-**XCompose** file with some additional symbols for Compose Key.
+~~**XCompose** file with some additional symbols for Compose Key.~~
+*Removed temporarily because it breaks stuff on NixOS*
 
 **Markdownlint**, **prettier** and **stylua** config files.
 Not actively using the first two however.
