@@ -46,17 +46,17 @@ local config = {
 
     -- Font configuration
     -- https://wezfurlong.org/wezterm/config/fonts.html
-    font_size = 15,
+    font_size = 14.5,
 
     font = wezterm.font_with_fallback({
         "FiraCode Nerd Font",
-        "twemoji-ttf",
+        "Twemoji",
     }),
 
     font_rules = {
         {
-            intensity = "Bold",
             italic = true,
+            intensity = "Bold",
             font = wezterm.font({
                 family = "Iosevka Nerd Font",
                 weight = "Bold",
