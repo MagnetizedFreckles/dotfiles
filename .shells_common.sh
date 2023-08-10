@@ -10,8 +10,8 @@ alias egrep='egrep --color=auto'
 alias scim="sc-im"
 alias yay="paru"
 alias syu="paru -Syu"
-alias vpn="wg-quick up $HOME/.wireguard/*-ams.conf"
-alias vpndown="wg-quick down $HOME/.wireguard/*-ams.conf"
+alias vpn="wg-quick up $HOME/.wireguard/*ams.conf"
+alias vpndown="wg-quick down $HOME/.wireguard/*ams.conf"
 
 
 # Editing crontab with neovim
