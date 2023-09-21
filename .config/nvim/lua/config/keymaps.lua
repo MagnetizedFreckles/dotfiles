@@ -14,6 +14,11 @@ map("n", "j", "jzz", { noremap = true, silent = true }) -- :nnoremap j jzz
 map("n", "k", "kzz", { noremap = true, silent = true }) -- :nnoremap k kzz
 map("v", "j", "jzz", { noremap = true, silent = true }) -- :vnoremap j jzz
 map("v", "k", "kzz", { noremap = true, silent = true }) -- :vnoremap k kzz
+-- The same for cyrillic layouts
+map("n", "о", "jzz", { noremap = true, silent = true }) -- :nnoremap о jzz
+map("n", "л", "kzz", { noremap = true, silent = true }) -- :nnoremap л kzz
+map("v", "о", "jzz", { noremap = true, silent = true }) -- :vnoremap о jzz
+map("v", "л", "kzz", { noremap = true, silent = true }) -- :vnoremap л kzz
 
 -- Assign tables to variables to improve modularity and readability
 local enru = { "en", "ru" }
