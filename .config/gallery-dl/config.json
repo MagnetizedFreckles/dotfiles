@@ -1,0 +1,7 @@
+{
+    "extractor": {
+        "pixiv": {
+            "filename": "{id}_p{num}_{user[name]}_{user[id]}.{extension}"
+        }
+    }
+}
