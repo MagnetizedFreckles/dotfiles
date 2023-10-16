@@ -25,21 +25,21 @@ right_format = """$time"""
 format = "[$user]($style)[@](fg:242)"
 style_user = "fg:226"
 style_root = "bold red"
-show_always = true # Username is shown always
+show_always = true                    # Username is shown always
 
 [hostname]
-format = "[$hostname]($style)[$ssh_symbol]($style)"
+format = "[$hostname]($style)[$ssh_symbol](fg:87)"
 style = "italic fg:33"
 trim_at = "-"
-ssh_only = false # Hostname is shown always, not only in ssh
+ssh_only = false                                   # Hostname is shown always, not only in ssh
 ssh_symbol = ''
 disabled = false
 
 [directory]
 style = "bold fg:226"
-truncation_length = 2 # Amount of directory levels after which truncation is done
+truncation_length = 2         # Amount of directory levels after which truncation is done
 fish_style_pwd_dir_length = 1 # Option for showing only one letter in names of parent directories
-truncate_to_repo = false # If in Git repo, dir is shown from repo's root. Disabled im my case
+truncate_to_repo = false      # If in Git repo, dir is shown from repo's root. Disabled im my case
 truncation_symbol = "repo: "
 read_only = " "
 read_only_style = "red"
@@ -63,7 +63,7 @@ disabled = true
 
 [time]
 format = "[$time]($style)"
-time_format = "%F - %T" # Date in ISO-8601 format and time
+time_format = "%F - %T"    # Date in ISO-8601 format and time
 style = "bright-white"
 disabled = false
 
@@ -73,15 +73,15 @@ format = ' [in](fg:242) [$indicator]($style) ' # In square brackets
 style = 'bold italic fg:69'
 zsh_indicator = '[zsh](bold italic fg:56)'
 fish_indicator = '[fsh](bold italic fg:42)'
-disabled = false # If you are using only one shell, disable this
+disabled = false                               # If you are using only one shell, disable this
 
 [character]
-success_symbol = "[○](bold white)" # Usual symbol. In vim-like means "Insert"
+success_symbol = "[○](bold white)"            # Usual symbol. In vim-like means "Insert"
 error_symbol = "[×](bold red)"
-vimcmd_symbol = '[⡷](bold white)' # In vim-like means "Normal"
+vimcmd_symbol = '[⡷](bold white)'             # In vim-like means "Normal"
 vimcmd_replace_one_symbol = '[_](bold white)' # In vim-like meand "Replace" (fish only)
 vimcmd_replace_symbol = '[_](bold white)'
-vimcmd_visual_symbol = '[>](bold white)' # In vim-like means "Visual" (fish only)
+vimcmd_visual_symbol = '[>](bold white)'      # In vim-like means "Visual" (fish only)
 
 # Symbol depending on your OS. Disabled in my config
 [os]
@@ -94,53 +94,16 @@ format = 'via [$symbol$state]($style) [\($name\)](bold italic fg:39) '
 symbol = " "
 style = 'italic fg:51'
 
-# Below are just nerd-font icons for different things, copied from official docs
-# Some of them are used; most of them aren't
-# Delete it if you want
-[aws]
-symbol = "  "
-
-[buf]
-symbol = " "
-
+# Nerd-fonts symbols for different things
+# Some of them aren't even used
 [c]
 symbol = " "
-
-[conda]
-symbol = " "
-
-[dart]
-symbol = " "
-
-[docker_context]
-symbol = " "
-
-[elixir]
-symbol = " "
-
-[elm]
-symbol = " "
 
 [fossil_branch]
 symbol = " "
 
 [golang]
 symbol = " "
-
-[guix_shell]
-symbol = " "
-
-[haskell]
-symbol = " "
-
-[haxe]
-symbol = "⌘ "
-
-[hg_branch]
-symbol = " "
-
-[java]
-symbol = " "
 
 [julia]
 symbol = " "
@@ -151,58 +114,21 @@ symbol = " "
 [memory_usage]
 symbol = " "
 
-[meson]
-symbol = "喝 "
-
-[nim]
-symbol = " "
-
-[nodejs]
-symbol = " "
-
 [os.symbols]
-Alpine = " "
-Amazon = " "
 Android = " "
 Arch = " "
-CentOS = " "
-Debian = " "
-DragonFly = " "
-Emscripten = " "
-EndeavourOS = " "
-Fedora = " "
-FreeBSD = " "
 Garuda = " ﯑"
-Gentoo = " "
-HardenedBSD = "ﲊ "
 Illumos = " "
 Linux = " "
 Macos = " "
-Manjaro = " "
-Mariner = " "
-MidnightBSD = " "
 Mint = " "
-NetBSD = " "
 NixOS = " "
 OpenBSD = " "
-openSUSE = " "
-OracleLinux = " "
-Pop = " "
-Raspbian = " "
-Redhat = " "
-RedHatEnterprise = " "
-Redox = " "
-Solus = "ﴱ "
-SUSE = " "
 Ubuntu = " "
-Unknown = " "
 Windows = " "
 
 [package]
 symbol = " "
-
-[pijul_channel]
-symbol = "🪺 "
 
 [python]
 symbol = " "
@@ -210,14 +136,5 @@ symbol = " "
 [rlang]
 symbol = "ﳒ "
 
-[ruby]
-symbol = " "
-
 [rust]
 symbol = " "
-
-[scala]
-symbol = " "
-
-[spack]
-symbol = "🅢 "
