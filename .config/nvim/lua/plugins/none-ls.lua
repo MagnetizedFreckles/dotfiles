@@ -12,6 +12,7 @@ return {
                     -- nls.builtins.diagnostics.ruff, -- Python diagnostics, better install ruff-lsp instead
                     -- nls.builtins.diagnostics.markdownlint, -- Markdown diagnostics
                     nls.builtins.formatting.rustfmt, -- Rust formatting
+                    nls.builtins.formatting.shfmt, -- Shell script formatting
                 },
             }
         end,

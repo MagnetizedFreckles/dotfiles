@@ -44,6 +44,7 @@ vim.g.maplocalleader = " " -- Mapping local leader key
 opt.ignorecase = true
 opt.smartcase = true -- Enable smart search
 opt.iskeyword:append("-") -- Dash as part of the word
+-- TODO:Enable smoothscroll when it is finally added
 
 -----------------------------------------------------------
 -- Adding cyrillic mappings for normal and visual mode

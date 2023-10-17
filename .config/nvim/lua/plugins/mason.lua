@@ -8,14 +8,9 @@ local M = {
             ensure_installed = {
                 "bash-language-server",
                 "codelldb",
-                "json-lsp",
-                "markdownlint",
                 "marksman",
-                "ruff",
-                "ruff-lsp",
                 "stylua",
                 "shfmt",
-                "yaml-language-server",
             },
         },
         ---@param opts MasonSettings | {ensure_installed: string[]}
