@@ -17,7 +17,11 @@ function PandocMdHtml()
     local filename = vim.fn.expand("%:p")
     local output_filename = vim.fn.fnamemodify(filename, ":r") .. ".html"
 
-    local pandoc_command = string.format("pandoc --from commonmark_x %s -s -o %s --katex", filename, output_filename)
+    local pandoc_command = string.format(
+        "pandoc --from commonmark_x %s -s -o %s --katex --metadata-file=markdown.yaml",
+        filename,
+        output_filename
+    )
     vim.fn.system(pandoc_command)
     vim.api.nvim_out_write("Converted .md to .html\n")
 end
@@ -28,7 +32,7 @@ vim.api.nvim_create_autocmd("FileType", {
             "n",
             "<leader>cb",
             ":lua PandocMdHtml()<CR>",
-            { noremap = true, silent = true, desc = "Convert Markdown document to html" }
+            { noremap = true, silent = true, desc = "Convert md to html" }
         )
     end,
 })
