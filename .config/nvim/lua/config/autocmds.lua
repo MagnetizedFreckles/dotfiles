@@ -12,19 +12,23 @@ vim.api.nvim_create_autocmd("FileType", {
     end,
 })
 
--- I tried setting all of this for rmd, but failed,
--- and right have zero plans on using, so whatever
+-- Adding keymap for converting markdown to html with pandoc
+function PandocMdHtml()
+    local filename = vim.fn.expand("%:p")
+    local output_filename = vim.fn.fnamemodify(filename, ":r") .. ".html"
 
---[[ autocmd Filetype rmd map <F5> :!echo<space>"require(rmarkdown);<space>render('<c-r>%')"<space>\|<space>R<space>--vanilla<enter>
-
-vim.api.nvim_create_autocmd({"BufEnter", "BufWinEnter"}, {
-          pattern = {"*.rmd"},
-          command = "echo "require(rmarkdown);render('<c-r>%')" \| R --vanilla",
-        })
-
-
-vim.api.nvim_create_autocmd("FileType", { pattern = "rmd",
+    local pandoc_command = string.format("pandoc --from commonmark_x %s -s -o %s --katex", filename, output_filename)
+    vim.fn.system(pandoc_command)
+    vim.api.nvim_out_write("Converted .md to .html\n")
+end
+vim.api.nvim_create_autocmd("FileType", {
+    pattern = "markdown",
     callback = function()
-        vim.api.nvim_buf_set_keymap(<F5>,"echo "require(rmarkdown);render('<c-r>%')" \| R --vanilla",opts)
-    end})
-]]
+        vim.api.nvim_set_keymap(
+            "n",
+            "<leader>cb",
+            ":lua PandocMdHtml()<CR>",
+            { noremap = true, silent = true, desc = "Convert Markdown document to html" }
+        )
+    end,
+})
