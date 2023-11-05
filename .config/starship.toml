@@ -1,9 +1,5 @@
 # Prompt design is vaguely based on fino theme from oh-my-zsh
 # Though I changed stuff here and there
-# And yeah, colors in prompt resembling Ukrainian flag is a semi-coincidence
-# I was just playing with different color combinations, trying to find nice one
-# And only after using these for a while I noticed the similarity. And it's great
-# Слава Україні!
 
 # Get editor completions based on the config schema
 # (I don't know what this means)
@@ -14,7 +10,7 @@ add_newline = false
 
 # Main prompt
 format = """
-[╭](bold white)$username$hostname$os$shell$directory$nix_shell$git_branch$git_status
+[╭](bold white)$username$hostname$os$shell$directory$nix_shell$git_branch$git_status$cmd_duration
 [╰](bold white)$character
 """
 
@@ -55,10 +51,12 @@ ahead = "⇡${count}"
 diverged = "⇕⇡${ahead_count}⇣${behind_count}"
 behind = "⇣${count}"
 
-# This is also disabled here, so change 'true' to 'false'
 [cmd_duration]
-min_time = 1
-format = ' [\($duration\)]($style)' # Written in parentheses, you may want to change that
+min_time = 500
+format = '[\($duration\)]($style) '
+show_milliseconds = true
+show_notifications = true
+min_time_to_notify = 60_000
 disabled = true
 
 [time]
