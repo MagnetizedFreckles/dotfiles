@@ -1,0 +1,31 @@
+#!/usr/bin/env bash
+
+# Download youtube video to standard yt-dlp location from provided link and
+# play it in mpv right after it is downloaded.
+# It expects all necessary options already present in yt-dlp config.
+
+# Default video quality is 1080p
+quality="bv[height <=1080]+ba"
+
+# If the "-h" argument passed, the video will be downloaded in 720p
+if [ "$1" == "-h" ]; then
+	quality="bv[height <=720]+ba"
+	shift
+fi
+
+# Check if a link was provided as an argument
+if [ -z "$1" ]; then
+	echo "Usage: $0 [-h] <VIDEO_URL>"
+	exit 1
+fi
+
+# Last line of yt-dlp output usually contains the file location
+# "unbuffer" is used for preserving colors while using tee
+# (idk if this is an optimal solution or not)
+last_line=$(unbuffer yt-dlp -f "$quality" "$1" | tee /dev/tty | tail -n 1)
+
+# This gets the file location from the last quoted string on the last line
+file_location=$(echo "$last_line" | awk -F'"' '{print $(NF-1)}')
+
+# Play the video! ^^
+mpv "$file_location"
