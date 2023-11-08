@@ -7,6 +7,11 @@ set PATH $HOME/.cargo/bin $PATH
 # And also python's files
 set PATH $HOME/.local/bin $PATH
 
+# Add nix binaries to PATH if on other distro
+if not test -e /etc/NIXOS
+    set PATH $HOME/.nix-profile/bin/ $PATH
+end
+
 # Disabling welcome message in fish
 set -U fish_greeting
 
