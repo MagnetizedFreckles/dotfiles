@@ -1,6 +1,9 @@
 #!/usr/bin/env bash
 
-# Download youtube video to standard yt-dlp location from provided link and
+# ytmpv
+#
+# an overcomplicated noob-level script, just to download
+# youtube video from provided link to standard yt-dlp location and
 # play it in mpv right after it is downloaded.
 # It expects all necessary options already present in yt-dlp config.
 
