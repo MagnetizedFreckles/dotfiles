@@ -3,8 +3,7 @@
 Made by a person with a severe skill issue.^^  
 Lots of sample configs and other people's dotfiles were used.
 
-Feel free to borrow anything you need.
-But be careful.
+Feel free to borrow anything you need. :>
 
 ***This will work only only on Linux!!!***  
 ***Lots of things won't work on macOS, and usually I don't know why.***  
@@ -22,7 +21,7 @@ Of course, you may change names of alias or directory, if you like.
 alias dfgit='/usr/bin/env git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 ```
 2. Run this, so not to create any recursion problems when cloning.
-(I personally don't find it necessary, but the guide says so)
+(I personally don't find it necessary, but the guide says to do so)
 ```bash
 echo ".dotfiles" >> .gitignore
 ```
@@ -38,7 +37,7 @@ dfgit checkout
 ```bash
 dfgit config --local status.showUntrackedFiles no
 ```
-6. Optional. Download required nerd fonts.  
+6. *Optional.* Download required nerd fonts.  
 Script for that is at `~/.scripts/nerdfont_download.sh`  
 Firstly, you will need to make this script executable:
 ```bash
@@ -59,36 +58,71 @@ rm $HOME/Downloads/Iosevka.zip
 
 ### Fonts
 
-**FiraCode** as a main font and **Iosevka** for italics in WezTerm.
-All patched **Nerd Fonts**.
+[FiraCode](https://github.com/tonsky/FiraCode) as a main font,
+and [Iosevka](https://github.com/be5invis/Iosevka) for italics in WezTerm.
+All patched [Nerd Fonts](https://www.nerdfonts.com/).
 
 ### Shell
 
-I mostly use **fish**, but still have a somewhat usable **zsh** config and very basic **bashrc**.  
+I mostly use [fish](https://fishshell.com/), but still have a somewhat usable
+**zsh** config (syntax highlighting is borked btw) and very basic **bashrc**.  
 
 `~/.shells_common.sh` contains aliases+PATH variables, and it is sourced by both bash and zsh.  
 Maybe, I will make it so fish could also source it.
 But now fish aliases are in `~/.config/fish/aliases.fish`
 
-And yeah, **starship** as my cross-shell prompt engine. Pretty comfy.
+And yeah, [starship](https://starship.rs/) as my cross-shell prompt engine. Pretty comfy.
 
 ### Terminal
 
-Right now I use **WezTerm**, previously used **Alacritty**.
+Now I use [WezTerm](https://github.com/wez/wezterm), previously used [Alacritty](https://alacritty.org/).
 
-However, instead of builtin tab functionality, I still use **tmux**.
-Have some helper scripts for it in respective directory.  
-Probably going to change my multiplexer to **zellij** after session saving feature is added.
+However, instead of builtin multiplexing functionality, I still use [tmux](https://github.com/tmux/tmux).  
+It has a relatively big config file, yet it is pretty rough around the edges.
+I also have some scripts as part of it's config in respective directory.  
+
+Probably will change my multiplexer to [zellij](https://zellij.dev/) someday,
+but definitely not soon.
 
 ### Editor
 
-**NeoVim** with **LazyVim** config. Did some changes though.
+[LazyVim](https://www.lazyvim.org/) distribution of [Neovim](https://neovim.io/).
+
+Custom changes include:
+- Setting colorscheme to [catppuccin-mocha](https://github.com/catppuccin/catppuccin)
+with transparent background.
+- Setting an autocmd that builds an html file from md using pandoc,
+with support for LaTeX expressions among other things.
+- Setting up a small script that lets me cycle between
+spellcheck dictionaries. From 3 (*en, ru, uk*) I have two set.
+
+I also have some sort of working config for [helix](https://helix-editor.com/),
+but I don't think I will use it in a foreseeable future.  
+But the config is still there.
+
+### Video player
+
+[mpv](https://mpv.io/) with very basic config.
+
+Also I wrote [ytmpv script](/.local/bin/ytmpv),
+which downloads video from youtube link to default yt-dlp location,
+with default yt-dlp settings (except video quality, it can be changed to 720p)
+and then plays the video in mpv.
 
 ### Other stuff
 
 **.XCompose** file with some additional symbols for Compose Key.
 
-**Markdownlint**, **prettier** and **stylua** config files.
-Not actively using the first two however.
+Config files for:
+- [markdownlint](https://github.com/DavidAnson/markdownlint)
+- [prettier](https://prettier.io/)
+- [StyLua](https://github.com/JohnnyMorganz/StyLua)
+Not using the first two however.
+Maybe, later.  
+Or, maybe, I will remove them altogether.
 
-Some helper scripts.
+Default markdown metadata file for [pandoc](https://pandoc.org/).
+
+A little bit of options for [gallery-dl](https://github.com/mikf/gallery-dl).
+
+[yt-dlp](https://github.com/yt-dlp/yt-dlp) config with necessary options, nothing complex.
