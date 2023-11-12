@@ -4,13 +4,15 @@
 
 OS=$(uname -s)
 if [ "$OS" = "Linux" ]; then
-    # xclip -o | tmux load-buffer - ; tmux paste-buffer
-    cb paste | tmux load-buffer - ; tmux paste-buffer
-    tmux display-message "Pasted!"
+	xclip -o | tmux load-buffer -
+	#cb paste | tmux load-buffer -
+	tmux paste-buffer
+	tmux display-message "Pasted!"
 elif [ "$OS" = "Darwin" ]; then
-    reattach-to-user-namespace pbpaste | tmux load-buffer - ; tmux paste-buffer
-    tmux display-message "Pasted!"
+	reattach-to-user-namespace pbpaste | tmux load-buffer -
+	tmux paste-buffer
+	tmux display-message "Pasted!"
 else
-    tmux display-message "Unsupported operating system: $OS"
-    exit 1
+	tmux display-message "Unsupported operating system: $OS"
+	exit 1
 fi
