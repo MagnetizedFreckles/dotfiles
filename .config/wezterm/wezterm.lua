@@ -46,7 +46,7 @@ local config = {
 
     -- Font configuration
     -- https://wezfurlong.org/wezterm/config/fonts.html
-    font_size = 14.5,
+    font_size = 13,
 
     font = wezterm.font_with_fallback({
         "FiraCode Nerd Font",
