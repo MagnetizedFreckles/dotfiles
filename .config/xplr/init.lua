@@ -1,6 +1,6 @@
 ---@diagnostic disable
 local xplr = xplr
-version = "0.21.3"
+version = "0.21.1"
 ---@diagnostic disable
 
 local home = os.getenv("HOME")
