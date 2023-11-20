@@ -6,8 +6,60 @@ version = "0.21.1"
 local home = os.getenv("HOME")
 
 -- My options
+
 -- Enable mouse scrolling by default
 xplr.config.general.enable_mouse = true
+
+-- Change how "modified" column is rendered
+xplr.fn.builtin.fmt_general_table_row_cols_4 = function(m)
+    -- Default, for reference
+    --return tostring(os.date("%a %b %d %H:%M:%S %Y", m.last_modified / 1000000000))
+    return tostring(os.date("%y-%m-%d %H:%M:%S", m.last_modified / 1000000000))
+end
+
+-- Slightly updating default layout
+xplr.config.layouts.builtin.default = {
+    Horizontal = {
+        config = {
+            constraints = {
+                { Percentage = 75 },
+                { Percentage = 25 },
+            },
+        },
+        splits = {
+            {
+                Vertical = {
+                    config = {
+                        constraints = {
+                            { Length = 3 },
+                            { Min = 1 },
+                            { Length = 3 },
+                        },
+                    },
+                    splits = {
+                        "SortAndFilter",
+                        "Table",
+                        "InputAndLogs",
+                    },
+                },
+            },
+            {
+                Vertical = {
+                    config = {
+                        constraints = {
+                            { Percentage = 30 },
+                            { Percentage = 70 },
+                        },
+                    },
+                    splits = {
+                        "Selection",
+                        "HelpMenu",
+                    },
+                },
+            },
+        },
+    },
+}
 
 -- Plugins
 local xpm_path = home .. "/.local/share/xplr/dtomvan/xpm.xplr"
