@@ -89,7 +89,7 @@ config.font_rules = {
         italic = true,
         intensity = "Bold",
         font = wezterm.font({
-            family = "Iosevka Nerd Font",
+            family = "Iosevka NF",
             weight = "Bold",
             style = "Italic",
         }),
@@ -98,7 +98,7 @@ config.font_rules = {
         italic = true,
         intensity = "Half",
         font = wezterm.font({
-            family = "Iosevka Nerd Font",
+            family = "Iosevka NF",
             weight = "DemiBold",
             style = "Italic",
         }),
@@ -107,7 +107,7 @@ config.font_rules = {
         italic = true,
         intensity = "Normal",
         font = wezterm.font({
-            family = "Iosevka Nerd Font",
+            family = "Iosevka NF",
             style = "Italic",
         }),
     },
