@@ -44,7 +44,9 @@ vim.g.maplocalleader = " " -- Mapping local leader key
 opt.ignorecase = true
 opt.smartcase = true -- Enable smart search
 opt.iskeyword:append("-") -- Dash as part of the word
--- TODO:Enable smoothscroll when it is finally added
+opt.conceallevel = 2 -- So the * are concealed, but not the dashes in lists
+-- NOTE:I thought of adding smoothscroll here, but 0.10 version is still far
+-- away, and it is enabled by default in LazyVim, so whatevs
 
 -----------------------------------------------------------
 -- Adding cyrillic mappings for normal and visual mode
