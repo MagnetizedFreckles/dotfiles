@@ -12,7 +12,11 @@ vim.api.nvim_create_autocmd("FileType", {
     end,
 })
 
--- Adding keymap for converting markdown to html with pandoc
+-- So, everything below is to convert .md files to .html
+-- on every filesave, but only if certain keybind was pressed
+--
+-- Define the file conversion process
+-- TODO: Change how and when notifications are shown
 function PandocMdHtml()
     local filename = vim.fn.expand("%:p")
     local output_filename = vim.fn.fnamemodify(filename, ":r") .. ".html"
@@ -23,15 +27,25 @@ function PandocMdHtml()
         output_filename
     )
     vim.fn.system(pandoc_command)
-    vim.api.nvim_out_write("Converted .md to .html\n")
+    vim.api.nvim_out_write("Converted!\n")
 end
+-- Make it convert on every filesave
+function ConvertOnSave()
+    vim.api.nvim_create_autocmd("BufWritePost", {
+        pattern = "*.md",
+        command = "lua PandocMdHtml()",
+    })
+end
+-- Define a keybind to enable autoconversion
+-- TODO: Make it both enable and disable autoconversion,
+-- depending on current state
 vim.api.nvim_create_autocmd("FileType", {
     pattern = "markdown",
     callback = function()
         vim.api.nvim_set_keymap(
             "n",
             "<leader>cb",
-            ":lua PandocMdHtml()<CR>",
+            ":lua ConvertOnSave()<CR>",
             { noremap = true, silent = true, desc = "Convert md to html" }
         )
     end,
