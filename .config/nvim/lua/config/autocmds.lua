@@ -4,7 +4,7 @@
 
 -- Two spaces is a Nix-lang convention
 vim.api.nvim_create_autocmd("FileType", {
-    pattern = "nix",
+    pattern = { "nix", "json" },
     callback = function()
         vim.opt.tabstop = 2
         vim.opt.softtabstop = 2
