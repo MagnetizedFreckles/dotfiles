@@ -1,6 +1,7 @@
 local wezterm = require("wezterm")
 local mux = wezterm.mux
 local shell = require("config.shell")
+local fonts = require("config.fonts")
 local keybinds = require("config.keybinds")
 Os_name = require("utils.os_name")
 Blur = require("utils.blur")
@@ -75,43 +76,9 @@ config.window_background_opacity = Opacity
 config.macos_window_background_blur = 20
 
 -- Font configuration
--- https://wezfurlong.org/wezterm/config/fonts.html
-config.font_size = 13
-
-config.font = wezterm.font_with_fallback({
-    "FiraCode Nerd Font",
-    "Twemoji",
-})
-
--- TODO: Make Twemoji work with italics
-config.font_rules = {
-    {
-        italic = true,
-        intensity = "Bold",
-        font = wezterm.font({
-            family = "Iosevka NF",
-            weight = "Bold",
-            style = "Italic",
-        }),
-    },
-    {
-        italic = true,
-        intensity = "Half",
-        font = wezterm.font({
-            family = "Iosevka NF",
-            weight = "DemiBold",
-            style = "Italic",
-        }),
-    },
-    {
-        italic = true,
-        intensity = "Normal",
-        font = wezterm.font({
-            family = "Iosevka NF",
-            style = "Italic",
-        }),
-    },
-}
+config.font_size = fonts.font_size
+config.font = fonts.font
+config.font_rules = fonts.font_rules
 
 -- Keybinds
 config.mouse_bindings = keybinds.mouse_bindings
