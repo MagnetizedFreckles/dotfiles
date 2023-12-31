@@ -79,6 +79,7 @@ config.macos_window_background_blur = 20
 config.font_size = fonts.font_size
 config.font = fonts.font
 config.font_rules = fonts.font_rules
+config.warn_about_missing_glyphs = false
 
 -- Keybinds
 config.mouse_bindings = keybinds.mouse_bindings
