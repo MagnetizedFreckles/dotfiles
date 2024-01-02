@@ -12,6 +12,17 @@ vim.api.nvim_create_autocmd("FileType", {
     end,
 })
 
+local centerscroll = require("config.centerscroll")
+local checkline = nil
+vim.api.nvim_create_autocmd("CursorMoved", {
+    callback = function()
+        if vim.fn.line(".") ~= checkline then
+            centerscroll.centerscroll()
+            checkline = vim.fn.line(".")
+        end
+    end,
+})
+
 -- So, everything below is to convert .md files to .html
 -- on every filesave, but only if certain keybind was pressed
 --
