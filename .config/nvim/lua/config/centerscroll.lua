@@ -1,6 +1,8 @@
 local M = {}
 
 function CenterCursor()
+    -- This should add "zz" after every executed command, so separate keymaps should be unnecessary
+    -- So far, this works as intended
     vim.api.nvim_feedkeys("zz", "nt", true)
 end
 
@@ -12,6 +14,8 @@ function M.centerscroll()
     local distance_to_eof = vim.fn.line("$") - vim.fn.line(".")
 
     if distance_to_eof <= screen_center then
+        -- I thought that setting scrolloff on every move of cursor is ineffective, hence these checks.
+        -- But maybe just setting scrolloff is faster than performing the check, idk
         if vim.opt.scrolloff:get() ~= 0 then
             vim.opt.scrolloff = 0
             CenterCursor()
