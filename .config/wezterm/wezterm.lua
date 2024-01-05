@@ -46,6 +46,9 @@ end
 
 config.default_prog = shell
 
+-- This is needed for undercurl to work
+config.term = "wezterm"
+
 -- Smart tab bar [distraction-free mode]
 config.hide_tab_bar_if_only_one_tab = true
 
