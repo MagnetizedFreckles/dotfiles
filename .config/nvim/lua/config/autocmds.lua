@@ -12,24 +12,6 @@ vim.api.nvim_create_autocmd("FileType", {
     end,
 })
 
--- This calls my function for keeping cursor always vertically centered
-local centerscroll = require("config.centerscroll")
--- Instantiate a variable outside the scope of autocmd,
--- to record the line where the cursor was on previous check
-local checkline = nil
-vim.api.nvim_create_autocmd("CursorMoved", {
-    callback = function()
-        -- Since calling centerscroll function on every move of the cursor is expensive,
-        -- this only performs the call when the line is changed
-        if vim.fn.line(".") ~= checkline then
-            -- Call the function, then record current line in a variable for the latter checks.
-            -- Very simple.
-            centerscroll.centerscroll()
-            checkline = vim.fn.line(".")
-        end
-    end,
-})
-
 -- So, everything below is to convert .md files to .html
 -- on every filesave, but only if certain keybind was pressed
 --
