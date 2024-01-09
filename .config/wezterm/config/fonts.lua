@@ -7,7 +7,7 @@ local wezterm = require("wezterm")
 -- TODO: Set font size depending on resolution
 
 -- Just a simple switch cuz I don't need more
-local monaspace = true
+local monaspace = false
 
 if monaspace == true then
     M.font_size = 12
