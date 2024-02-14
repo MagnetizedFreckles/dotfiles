@@ -17,6 +17,9 @@ alias crontab="export VISUAL=nvim; crontab"
 alias vimdiff="nvim -d"
 export EDITOR=nvim
 
+# Enable mouse support in less (and also man)
+export LESS='--mouse --wheel-lines=3'
+
 # Alias for managing dotfiles using bare gitrepo
 alias dfgit='/usr/bin/env git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 alias dflg='lazygit --git-dir=$HOME/.dotfiles/ --work-tree=$HOME' # Lazygit alias for dotfile bare repo

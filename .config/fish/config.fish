@@ -49,5 +49,8 @@ function fish_user_key_bindings
     bind p fish_clipboard_paste
 end
 
+# Enable mouse support in less (and also man)
+export LESS='--mouse --wheel-lines=3'
+
 # Starship as a prompt engine
 starship init fish | source
