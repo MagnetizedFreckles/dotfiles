@@ -10,6 +10,8 @@ return {
             { name = "buffer", option = { keyword_pattern = [[\k\+]] } },
             -- Use spelllang dictionaries as source
             -- TODO: Somehow differentiate spelllang suggestions from buffer
+
+            --[[
             {
                 name = "spell",
                 option = {
@@ -19,6 +21,7 @@ return {
                     end,
                 },
             },
+            ]]
         })
     end,
 }
