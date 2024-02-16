@@ -52,5 +52,16 @@ end
 # Enable mouse support in less (and also man)
 export LESS='--mouse --wheel-lines=3'
 
+# Shell wrapper for launching yazi file manager with the ability to change cwd
+# Copied from here: https://yazi-rs.github.io/docs/quick-start#shell-wrapper
+function ya
+    set tmp (mktemp -t "yazi-cwd.XXXXX")
+    yazi $argv --cwd-file="$tmp"
+    if set cwd (cat -- "$tmp"); and [ -n "$cwd" ]; and [ "$cwd" != "$PWD" ]
+        cd -- "$cwd"
+    end
+    rm -f -- "$tmp"
+end
+
 # Starship as a prompt engine
 starship init fish | source
