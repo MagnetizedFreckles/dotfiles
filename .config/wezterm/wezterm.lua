@@ -3,16 +3,12 @@ local mux = wezterm.mux
 local shell = require("config.shell")
 local fonts = require("config.fonts")
 local keybinds = require("config.keybinds")
-Os_name = require("utils.os_name")
-Blur = require("utils.blur")
-Opacity = require("config.opacity")
+
+local session = require("utils.session")
+local blur = require("utils.blur")
+local opacity = require("config.opacity")
 
 --HOME = os.getenv("HOME")
-
--- Enable blur on KDE
-if Os_name.os_name() == "linux" then
-    Blur.linux()
-end
 
 -- Maximize and focus *first spawned* windows
 wezterm.on("gui-startup", function()
@@ -75,7 +71,17 @@ config.window_padding = {
     bottom = 0,
 }
 
-config.window_background_opacity = Opacity
+-- Enable blur on KDE X11 session
+if session.os_name() == "linux" then
+    if session.windowsystem() == "x11" then
+        config.enable_wayland = false
+        blur.kde()
+    elseif session.windowsystem() == "wayland" then
+        config.enable_wayland = true
+    end
+end
+
+config.window_background_opacity = opacity
 config.macos_window_background_blur = 20
 
 -- Font configuration

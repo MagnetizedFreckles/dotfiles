@@ -1,7 +1,11 @@
-local os_name = require("utils.os_name")
+local session = require("utils.session")
 
-if os_name.os_name() == "linux" then
-    return 0.90
-elseif os_name.os_name() == "macos" then
+if session.os_name() == "linux" then
+    if session.windowsystem() == "x11" then
+        return 0.90
+    elseif session.windowsystem() == "wayland" then
+        return 0.98
+    end
+elseif session.os_name() == "macos" then
     return 0.80
 end
