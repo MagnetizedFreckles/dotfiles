@@ -4,7 +4,7 @@ local shell = require("config.shell")
 local fonts = require("config.fonts")
 local keybinds = require("config.keybinds")
 
-local session = require("utils.session")
+local systemstuff = require("utils.systemstuff")
 local blur = require("utils.blur")
 local opacity = require("config.opacity")
 
@@ -72,11 +72,13 @@ config.window_padding = {
 }
 
 -- Enable blur on KDE X11 session
-if session.os_name() == "linux" then
-    if session.windowsystem() == "x11" then
+if systemstuff.os_name() == "linux" then
+    if systemstuff.windowsystem() == "x11" then
         config.enable_wayland = false
         blur.kde()
-    elseif session.windowsystem() == "wayland" then
+    elseif systemstuff.windowsystem() == "wayland" then
+        -- I use this instead:
+        -- https://github.com/taj-ny/kwin-forceblur
         config.enable_wayland = true
     end
 end

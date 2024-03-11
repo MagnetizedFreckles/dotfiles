@@ -1,8 +1,8 @@
-local session = require("utils.session")
+local systemstuff = require("utils.systemstuff")
 
-if session.os_name() == "macos" then
+if systemstuff.os_name() == "macos" then
     return { "/usr/bin/env", "fish", "-l" }
-elseif session.os_name() == "linux" then
+elseif systemstuff.os_name() == "linux" then
     return { "/usr/bin/env", "fish", "-l" }
 else
     return { "pwsh.exe" }
