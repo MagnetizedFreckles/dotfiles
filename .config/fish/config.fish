@@ -56,6 +56,11 @@ export LESS='--mouse --wheel-lines=3'
 export XCURSOR_THEME=Breeze_Light wezterm
 export XCURSOR_SIZE=30 wezterm
 
+# Just a glorified alias
+function rsynclocal
+    rsync -avhcWP --no-compress --delete-after $argv[1] $argv[2]
+end
+
 # Shell wrapper for launching yazi file manager with the ability to change cwd
 # Copied from here: https://yazi-rs.github.io/docs/quick-start#shell-wrapper
 function ya

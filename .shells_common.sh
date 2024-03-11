@@ -35,6 +35,12 @@ function ya() {
 	rm -f -- "$tmp"
 }
 
+# Just a glorified alias.
+# Probably will make it so it can accept more arguments
+function rsynclocal() {
+	rsync -avhcWP --no-compress --delete-after "$1" "$2"
+}
+
 # For correct cursors in wezterm
 export XCURSOR_THEME=Breeze_Light wezterm
 export XCURSOR_SIZE=30 wezterm
