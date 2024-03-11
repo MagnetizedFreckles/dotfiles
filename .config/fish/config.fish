@@ -52,6 +52,10 @@ end
 # Enable mouse support in less (and also man)
 export LESS='--mouse --wheel-lines=3'
 
+# For correct cursors in wezterm
+export XCURSOR_THEME=Breeze_Light wezterm
+export XCURSOR_SIZE=30 wezterm
+
 # Shell wrapper for launching yazi file manager with the ability to change cwd
 # Copied from here: https://yazi-rs.github.io/docs/quick-start#shell-wrapper
 function ya

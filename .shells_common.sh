@@ -35,6 +35,10 @@ function ya() {
 	rm -f -- "$tmp"
 }
 
+# For correct cursors in wezterm
+export XCURSOR_THEME=Breeze_Light wezterm
+export XCURSOR_SIZE=30 wezterm
+
 # Export PATH
 export PATH=$PATH:$HOME/.cargo/bin/ # Cargo packages
 export PATH=$PATH:$HOME/.local/bin/
