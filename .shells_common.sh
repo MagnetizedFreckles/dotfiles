@@ -8,7 +8,6 @@ alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
 
 alias scim="sc-im"
-alias yay="paru"
 alias syu="paru -Syu"
 
 # Editing crontab with neovim
@@ -18,6 +17,7 @@ alias vimdiff="nvim -d"
 export EDITOR=nvim
 
 # Enable mouse support in less (and also man)
+# Without --RAW-CONTROL-CHARS stuff breaks like pkgbuilds in yay and paru
 export LESS='--mouse --wheel-lines=3 --RAW-CONTROL-CHARS'
 
 # Alias for managing dotfiles using bare gitrepo
