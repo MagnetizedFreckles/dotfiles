@@ -18,7 +18,7 @@ alias vimdiff="nvim -d"
 export EDITOR=nvim
 
 # Enable mouse support in less (and also man)
-export LESS='--mouse --wheel-lines=3'
+export LESS='--mouse --wheel-lines=3 --RAW-CONTROL-CHARS'
 
 # Alias for managing dotfiles using bare gitrepo
 alias dfgit='/usr/bin/env git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'

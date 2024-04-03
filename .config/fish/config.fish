@@ -50,7 +50,8 @@ function fish_user_key_bindings
 end
 
 # Enable mouse support in less (and also man)
-export LESS='--mouse --wheel-lines=3'
+# Without --RAW-CONTROL-CHARS stuff breaks like pkgbuilds in yay and paru
+export LESS='--mouse --wheel-lines=3 --RAW-CONTROL-CHARS'
 
 # For correct cursors in wezterm
 export XCURSOR_THEME=Breeze_Light wezterm
