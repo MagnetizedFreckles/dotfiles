@@ -100,6 +100,16 @@ I also have some sort of working config for [helix](https://helix-editor.com/),
 but I don't think I will use it in a foreseeable future.  
 But the config is still there.
 
+### File managers
+
+Right now I use [yazi](https://github.com/sxyazi/yazi) as my terminal file manager of choice.
+It's fast, gets job done and generally has all I want from a terminal file manager.
+
+In the past I also tried to use [xplr](https://xplr.dev/) and [lf](https://github.com/gokcehan/lf).  
+xplr is generally nice but a little slow and rough around the edges.  
+And the lf is just too tedious for me to properly configure.
+Since yazi exists, why even bother?
+
 ### Video player
 
 [mpv](https://mpv.io/) with very basic config.
@@ -113,13 +123,8 @@ and then plays the video in mpv.
 
 **.XCompose** file with some additional symbols for Compose Key.
 
-Config files for:
-- [markdownlint](https://github.com/DavidAnson/markdownlint)
-- [prettier](https://prettier.io/)
-- [StyLua](https://github.com/JohnnyMorganz/StyLua)
-Not using the first two however.
-Maybe, later.  
-Or, maybe, I will remove them altogether.
+Config files for [markdownlint](https://github.com/DavidAnson/markdownlint).
+Maybe it should be updated.
 
 Default markdown metadata file for [pandoc](https://pandoc.org/).
 
