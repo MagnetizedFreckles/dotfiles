@@ -26,8 +26,8 @@ alias dflg='lazygit --git-dir=$HOME/.dotfiles/ --work-tree=$HOME' # Lazygit alia
 
 # Shell wrapper for launching yazi file manager with the ability to change cwd
 # Copied from here: https://yazi-rs.github.io/docs/quick-start#shell-wrapper
-function ya() {
-	local tmp="$(mktemp -t "yazi-cwd.XXXXX")"
+function yy() {
+	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")"
 	yazi "$@" --cwd-file="$tmp"
 	if cwd="$(cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
 		cd -- "$cwd"

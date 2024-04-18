@@ -64,8 +64,8 @@ end
 
 # Shell wrapper for launching yazi file manager with the ability to change cwd
 # Copied from here: https://yazi-rs.github.io/docs/quick-start#shell-wrapper
-function ya
-    set tmp (mktemp -t "yazi-cwd.XXXXX")
+function yy
+    set tmp (mktemp -t "yazi-cwd.XXXXXX")
     yazi $argv --cwd-file="$tmp"
     if set cwd (cat -- "$tmp"); and [ -n "$cwd" ]; and [ "$cwd" != "$PWD" ]
         cd -- "$cwd"
