@@ -1,0 +1,17 @@
+[user]
+	name = MagnetizedFreckles
+	email = magnetizedfreckles@disroot.org
+	signingkey = BE92DC6B6462AEE7
+[init]
+	defaultBranch = main
+[credential]
+	helper = cache
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[commit]
+	gpgSign = true
+[tag]
+	gpgSign = true
