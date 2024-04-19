@@ -62,6 +62,10 @@ function rsynclocal
     rsync -avhcWP --no-compress --delete-after $argv[1] $argv[2]
 end
 
+# Set gpg up so I don't have to type passphrase every time
+export GPG_TTY=$(tty)
+gpgconf --launch gpg-agent
+
 # Shell wrapper for launching yazi file manager with the ability to change cwd
 # Copied from here: https://yazi-rs.github.io/docs/quick-start#shell-wrapper
 function yy

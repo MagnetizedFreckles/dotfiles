@@ -20,6 +20,10 @@ export EDITOR=nvim
 # Without --RAW-CONTROL-CHARS stuff breaks like pkgbuilds in yay and paru
 export LESS='--mouse --wheel-lines=3 --RAW-CONTROL-CHARS'
 
+# Set gpg up so I don't have to type passphrase every time
+export GPG_TTY=$(tty)
+gpgconf --launch gpg-agent
+
 # Alias for managing dotfiles using bare gitrepo
 alias dfgit='/usr/bin/env git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 alias dflg='lazygit --git-dir=$HOME/.dotfiles/ --work-tree=$HOME' # Lazygit alias for dotfile bare repo
