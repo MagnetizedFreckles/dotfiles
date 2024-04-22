@@ -1,9 +1,6 @@
 # Get all aliases and PATH variables
 source "$HOME/.shells_common.sh"
 
-# Vi-mode for bash
-set -o vi
-
 # Function to relay SSH traffic through ssh-j.com. Useful when the host is behind a NAT
 # Copied from here: https://github.com/hackerschoice/thc-tips-tricks-hacks-cheat-sheet#ssh-j
 sshj() {
