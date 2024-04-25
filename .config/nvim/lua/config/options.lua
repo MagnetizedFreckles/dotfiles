@@ -33,20 +33,33 @@ opt.spelllang = { "en", "ru" } -- English/Russian as default spellchecked langua
 opt.cursorline = true -- Enable highlighting of the current line
 opt.number = true
 opt.relativenumber = true -- Enable hybrid line numbers
+
 opt.mouse = "a" -- Enable mouse
 opt.clipboard = "unnamedplus" -- For system clipboard
 opt.updatetime = 200 -- Save swap file and trigger CursorHold
 opt.whichwrap:append("<>[]hl") -- When cursor reaches end/beginning of line
 opt.splitbelow = true
 opt.splitright = true -- Window split
+
 vim.g.mapleader = " " -- Mapping leader key
 vim.g.maplocalleader = " " -- Mapping local leader key
+
 opt.ignorecase = true
 opt.smartcase = true -- Enable smart search
-opt.iskeyword:append("-") -- Dash as part of the word
+
+-- I want dashes to be considered part of the word while coding,
+-- but when I'm writing texts, it makes sense to use dashes and underscores
+-- as separators. Hence these options
+opt.iskeyword:append("-")
+vim.api.nvim_create_autocmd("FileType", {
+    pattern = { "markdown", "text" },
+    callback = function()
+        opt.iskeyword:remove("-")
+        opt.iskeyword:remove("_")
+    end,
+})
+
 opt.conceallevel = 2 -- So the * are concealed, but not the dashes in lists
--- NOTE:I thought of adding smoothscroll here, but 0.10 version is still far
--- away, and it is enabled by default in LazyVim, so whatevs
 
 -----------------------------------------------------------
 -- Adding cyrillic mappings for normal and visual mode
