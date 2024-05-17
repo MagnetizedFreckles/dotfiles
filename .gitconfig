@@ -15,3 +15,7 @@
 	gpgSign = true
 [tag]
 	gpgSign = true
+[alias]
+	pr = pull --rebase
+	st = status -s
+	amend = commit -a --amend --no-edit
