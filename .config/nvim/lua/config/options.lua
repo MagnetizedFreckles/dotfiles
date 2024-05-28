@@ -61,6 +61,9 @@ vim.api.nvim_create_autocmd("FileType", {
 
 opt.conceallevel = 2 -- So the * are concealed, but not the dashes in lists
 
+-- Apparently because of this new option I get visual glitches when lines duplicate
+opt.smoothscroll = false
+
 -----------------------------------------------------------
 -- Adding cyrillic mappings for normal and visual mode
 -----------------------------------------------------------
