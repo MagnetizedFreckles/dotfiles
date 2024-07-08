@@ -22,7 +22,7 @@ function Keybinds.setup(config)
 
     -- Probably gonna change leader to something else someday
     config.leader = {
-        key = "b",
+        key = "a",
         mods = "CTRL",
         timeout_milliseconds = 2000,
     }
