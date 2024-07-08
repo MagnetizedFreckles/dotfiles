@@ -8,8 +8,6 @@ local systemstuff = require("utils.systemstuff")
 local blur = require("utils.blur")
 local opacity = require("config.opacity")
 
---HOME = os.getenv("HOME")
-
 -- Maximize and focus *first spawned* windows
 wezterm.on("gui-startup", function()
     local tab, pane, window = mux.spawn_window({})
@@ -45,8 +43,20 @@ config.default_prog = shell
 -- This is needed for undercurl to work
 config.term = "wezterm"
 
--- Smart tab bar [distraction-free mode]
+config.scrollback_lines = 10000
+
+--[[
+config.unix_domains = {
+    {
+        name = "unix",
+    },
+}
+]]
+
+-- Tab settings
 config.hide_tab_bar_if_only_one_tab = true
+config.use_fancy_tab_bar = false
+config.switch_to_last_active_tab_when_closing_tab = true
 
 config.color_scheme = "Argonaut"
 config.colors = {
@@ -59,6 +69,37 @@ config.colors = {
     -- or the color of the vertical or horizontal bar when the cursor style is set to
     -- Bar or Underline.
     cursor_border = "#9399b2",
+
+    -- https://wezfurlong.org/wezterm/config/appearance.html#retro-tab-bar-appearance
+    tab_bar = {
+        background = "#0E1018",
+        active_tab = {
+            bg_color = "#2b2042",
+            fg_color = "#c0c0c0",
+            intensity = "Bold",
+            underline = "Single", -- "None", "Single" or "Double"
+            italic = false,
+            strikethrough = false,
+        },
+        inactive_tab = {
+            bg_color = "#1b1032",
+            fg_color = "#808080",
+        },
+        inactive_tab_hover = {
+            bg_color = "#3b3052",
+            fg_color = "#909090",
+            italic = true,
+        },
+        new_tab = {
+            bg_color = "#1b1032",
+            fg_color = "#808080",
+        },
+        new_tab_hover = {
+            bg_color = "#3b3052",
+            fg_color = "#909090",
+            italic = true,
+        },
+    },
 }
 
 -- Windowing stuff
@@ -86,13 +127,6 @@ end
 config.window_background_opacity = opacity
 config.macos_window_background_blur = 20
 
--- Font configuration
-config.font_size = fonts.font_size
-config.font = fonts.font
-config.font_rules = fonts.font_rules
-config.warn_about_missing_glyphs = false
-
--- Keybinds
-config.mouse_bindings = keybinds.mouse_bindings
-
+keybinds.setup(config)
+fonts.setup(config)
 return config
