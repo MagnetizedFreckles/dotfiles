@@ -59,6 +59,8 @@ vim.api.nvim_create_autocmd("FileType", {
     end,
 })
 
+vim.opt.scrolloff = 16 --math.ceil(vim.fn.winheight(0) / 2)
+
 opt.conceallevel = 2 -- So the * are concealed, but not the dashes in lists
 
 -- Apparently because of this new option I get visual glitches when lines duplicate
