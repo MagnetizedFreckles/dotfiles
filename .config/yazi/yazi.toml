@@ -1,6 +1,6 @@
 # If you encounter any issues, please make an issue at https://github.com/yazi-rs/schemas.
 
-[manager]
+[mgr]
 ratio = [1, 4, 3]
 sort_by = "alphabetical"
 sort_sensitive = false
