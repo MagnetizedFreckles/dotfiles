@@ -19,20 +19,20 @@ right_format = """$time"""
 
 [username]
 format = "[$user]($style)[@](fg:242)"
-style_user = "fg:226"
+style_user = "fg:198"
 style_root = "bold red"
 show_always = true                    # Username is shown always
 
 [hostname]
 format = "[$hostname]($style)[$ssh_symbol](fg:87)"
-style = "italic fg:33"
+style = "italic fg:204"
 trim_at = "-"
 ssh_only = false                                   # Hostname is shown always, not only in ssh
 ssh_symbol = ''
 disabled = false
 
 [directory]
-style = "bold fg:226"
+style = "bold fg:204"
 truncation_length = 2         # Amount of directory levels after which truncation is done
 fish_style_pwd_dir_length = 1 # Option for showing only one letter in names of parent directories
 truncate_to_repo = false      # If in Git repo, dir is shown from repo's root. Disabled im my case
