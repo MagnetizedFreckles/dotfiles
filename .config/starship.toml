@@ -1,8 +1,4 @@
-# Prompt design is vaguely based on fino theme from oh-my-zsh
-# Though I changed stuff here and there
-
 # Get editor completions based on the config schema
-# (I don't know what this means)
 "$schema" = 'https://starship.rs/config-schema.json'
 
 # Inserts a blank line between shell prompts (Disabled in my case)
@@ -10,18 +6,18 @@ add_newline = false
 
 # Main prompt
 format = """
-[╭](bold white)$username$hostname$os$shell$directory$nix_shell$git_branch$git_status$cmd_duration
-[╰](bold white)$character
+$username[@](fg:242)$hostname$os $shell$nix_shell $directory$git_branch $git_status
+$character
 """
 
 # Right prompt (date and time in my case)
-right_format = """$time"""
+right_format = """$time $cmd_duration"""
 
 [username]
-format = "[$user]($style)[@](fg:242)"
+format = "[$user]($style)"
 style_user = "fg:198"
 style_root = "bold red"
-show_always = true                    # Username is shown always
+show_always = true         # Username is shown always
 
 [hostname]
 format = "[$hostname]($style)[$ssh_symbol](fg:87)"
@@ -41,7 +37,7 @@ read_only = " "
 read_only_style = "red"
 
 [git_branch]
-format = '[on](fg:242) [$symbol$branch(:$remote_branch)]($style) '
+format = '[on](fg:242) [$symbol$branch(:$remote_branch)]($style)'
 symbol = " "
 style = "bold white"
 
@@ -53,33 +49,33 @@ behind = "⇣${count}"
 
 [cmd_duration]
 min_time = 500
-format = '[\($duration\)]($style) '
+format = '[\($duration\)]($style)'
+style = 'fg:210'
 show_milliseconds = true
 show_notifications = true
 min_time_to_notify = 60_000
-disabled = true
+disabled = false
 
 [time]
 format = "[$time]($style)"
 time_format = "%F - %T"    # Date in ISO-8601 format and time
 style = "bright-white"
-disabled = false
+disabled = true
 
-# Module for displaying currently used shell
 [shell]
-format = ' [in](fg:242) [$indicator]($style) ' # In square brackets
+format = '[$indicator]($style)'
 style = 'bold italic fg:69'
 zsh_indicator = '[zsh](bold italic fg:56)'
 fish_indicator = '[fsh](bold italic fg:42)'
-disabled = false                               # If you are using only one shell, disable this
+disabled = false
 
 [character]
-success_symbol = "[○](bold white)"            # Usual symbol. In vim-like means "Insert"
+success_symbol = "[❯](bold fg:198)"
 error_symbol = "[×](bold red)"
-vimcmd_symbol = '[⡷](bold white)'             # In vim-like means "Normal"
+vimcmd_symbol = '[⡷](bold fg:135)'            # In vim-like means "Normal"
 vimcmd_replace_one_symbol = '[_](bold white)' # In vim-like meand "Replace" (fish only)
 vimcmd_replace_symbol = '[_](bold white)'
-vimcmd_visual_symbol = '[>](bold white)'      # In vim-like means "Visual" (fish only)
+vimcmd_visual_symbol = '[○](bold fg:219)'     # In vim-like means "Visual" (fish only)
 
 # Symbol depending on your OS. Disabled in my config
 [os]
