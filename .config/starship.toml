@@ -52,7 +52,7 @@ min_time = 500
 format = '[\($duration\)]($style)'
 style = 'fg:210'
 show_milliseconds = true
-show_notifications = true
+show_notifications = false
 min_time_to_notify = 60_000
 disabled = false
 
