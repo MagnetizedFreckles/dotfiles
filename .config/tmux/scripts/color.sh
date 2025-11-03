@@ -21,9 +21,11 @@
 # and just rechecks it on subsequent runs.
 # But the script isn't that resource-intensive so whatever
 
+# TODO: Redo the colors
+
 # Sorta alias
 color() {
-	export TMUX_SESSION_COLOR="$1"
+    export TMUX_SESSION_COLOR="$1"
 }
 
 # Hash the hostname and take the first character
@@ -46,9 +48,10 @@ b) color "OrangeRed" ;;
 c) color "LightSkyBlue" ;;
 d) color "Crimson" ;;
 e) color "Tomato" ;;
+f) color "Tomato" ;;
 *)
-	echo "Something is broken!"
-	;;
+    echo "Something is broken!"
+    ;;
 esac
 
 echo "$TMUX_SESSION_COLOR"
