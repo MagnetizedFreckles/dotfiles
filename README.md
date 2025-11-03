@@ -37,7 +37,8 @@ dfgit checkout
 ```bash
 dfgit config --local status.showUntrackedFiles no
 ```
-6. *Optional.* Download required nerd fonts.  
+6. *The script below is unmaintained (also it just sucks) and I don't use it anymore, might as well remove.*  
+Download required nerd fonts.  
 Script for that is at `~/.scripts/nerdfont_download.sh`  
 Firstly, you will need to make this script executable:
 ```bash
