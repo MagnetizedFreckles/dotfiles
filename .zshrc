@@ -1,6 +1,7 @@
 export ZSH="$HOME/.zsh"
 
 # Get all aliases and PATH variables
+source "$HOME/.aliases.sh"
 source "$HOME/.shells_common.sh"
 
 
